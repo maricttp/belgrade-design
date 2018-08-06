@@ -56,4 +56,4 @@ class Header extends Component {
   }
 }
 
-export default translate('home')(Header)
+export default translate('translates')(Header)

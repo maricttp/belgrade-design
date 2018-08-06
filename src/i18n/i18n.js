@@ -4,10 +4,10 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import { reactI18nextModule } from 'react-i18next'
 
 i18n.use(Backend).use(LanguageDetector).use(reactI18nextModule).init({
-  fallbackLng: 'de',
+  fallbackLng: 'en',
 
-  ns: ['home'],
-  defaultNS: 'home',
+  ns: ['translates'],
+  defaultNS: 'translates',
   debug: false,
   backend: {
     loadPath: (lngs, namespaces) => {
