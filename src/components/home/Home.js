@@ -9,9 +9,12 @@ class Home extends Component {
   render () {
     const {t} = this.props
     return (
-     <div className={styles.home}>
-       <img src={intro}/>
-     </div>
+      <div className={styles.home} style={{backgroundImage: `url(${intro})`}}>
+        <div>
+          <h1>{t('homeTitle')}</h1>
+          <h4>{t('homeText')}</h4>
+        </div>
+      </div>
     )
   }
 }

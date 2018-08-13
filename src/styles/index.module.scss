@@ -37,16 +37,17 @@ html {
 
 h1 {
   font-weight: bold;
-  font-size: 78px;
+  font-size: 229px;
   letter-spacing: -0.2px;
-  line-height: 70px;
+  line-height: 180px;
 }
 
 h2 {
   font-weight: bold;
-  font-size: 59px;
+  font-size: 78px;
   letter-spacing: -0.2px;
-  line-height: 60px;
+  line-height: 71px;
+  color: $black;
 }
 
 h3 {
@@ -63,9 +64,9 @@ h4 {
   line-height: 30px;
 }
 h5 {
-  font-size: 22px;
-  letter-spacing: -0.1px;
-  line-height: 26px;
+  font-size: 32px;
+  letter-spacing: -0.11px;
+  line-height: 41px;
   font-weight: bold;
 }
 h6 {
@@ -76,35 +77,13 @@ h6 {
 }
 
 p {
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: 24px;
   font-weight: normal;
 }
 
 .content {
-  //background: $background-grey;
   width: 100%;
   height: 100%;
-}
-
-/*
-	Demo Styles: NOT REQUIRED
-*/
-
-.fullScreen {
-  height: 100%; /* makes panels the entire window height */
-  width: 100%;
-  text-align: center;
-}
-
-
-.blue {
-  background-color: #3883d8;
-}
-.red {
-  background-color: #cf3535;
-}
-.orange {
-  background-color: #ea6300;
 }

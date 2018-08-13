@@ -1,125 +1,105 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 
+import Header from '../components/header/Header'
 import Home from '../components/home/Home'
-import styles from '../styles/index.module.scss'
+import SkillsTools from '../components/skillsTools/SkillsTools'
+import Team from '../components/team/Team'
+import Designer from '../components/designer/Designer'
+
+import '../styles/index.module.scss'
+
+import { Fullpage, Slide, HorizontalSlider } from 'fullpage-react';
+const { changeFullpageSlide } = Fullpage;
+
+const fullPageOptions = {
+  // for mouse/wheel events
+  // represents the level of force required to generate a slide change on non-mobile, 10 is default
+  scrollSensitivity: 8,
+  // for touchStart/touchEnd/mobile scrolling
+  // represents the level of force required to generate a slide change on mobile, 10 is default
+  touchSensitivity: 8,
+  scrollSpeed: 700,
+  hideScrollBars: true,
+  enableArrowKeys: true,
+  // optional, set the initial vertical slide
+  activeSlide: 0
+};
+
+const horizontalSliderProps = {
+  name: 'horizontalSlider', // name is required
+  infinite: true
+};
 
 class IndexPage extends Component {
-  componentDidMount () {
-    const ScrollMagic = require('scrollmagic')
-    let controller = new ScrollMagic.Controller()
-    // Home Handler
-    const home_scene = new ScrollMagic.Scene({
-      triggerElement: '#home', // point of execution
-      duration: window.innerHeight -100, // pin element for the window height
-      triggerHook: 0, // don't trigger until #next-ID hits the top of the viewport
-      reverse: true // allows the effect to trigger when scrolled in the reverse direction
-    }).setPin('#home-element') // the element we want to pin
 
-    //Skill &  Tools Handler
-    const skill_tools_scene = new ScrollMagic.Scene({
-      triggerElement: '#skill-tools',
-      duration: window.innerHeight,
-      triggerHook: 0,
-    }).setPin('#skill-tools-element')
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: {
+        Fullpage: 0,
+        horizontalSlider: 0,
+        isVerticalSlide: false
+      }
+    }
+    this.onSlideChangeEnd = this.onSlideChangeEnd.bind(this);
+    this.buildVerticalSlide = this.buildVerticalSlide.bind(this);
+  }
 
-    // Projects Handler
-    const projects_scene = new ScrollMagic.Scene({
-      triggerElement: '#projects',
-      duration: window.innerHeight,
-      triggerHook: 0,
-    }).setPin('#projects-element')
+  componentDidMount() {
+    this.buildVerticalSlide(true, 0);
+  }
 
-    // Team Handler
-    const team_scene = new ScrollMagic.Scene({
-      triggerElement: '#team',
-      duration: window.innerHeight,
-      triggerHook: 0,
+  onSlideChangeEnd(name, props, state, newState) {
+    const oldActive = this.state.active;
+    const sliderState = {
+      [name]: newState.activeSlide
+    };
 
-    }).setPin('#team-element')
+    const updatedState = Object.assign(oldActive, sliderState);
+    this.setState(updatedState);
+  }
 
-    // Office Handler
-    const office_scene = new ScrollMagic.Scene({
-      triggerElement: '#office',
-      duration: window.innerHeight,
-      triggerHook: 0,
-
-    }).setPin('#office-element')
-
-    // City Handler
-    const city_scene = new ScrollMagic.Scene({
-      triggerElement: '#city',
-      duration: window.innerHeight,
-      triggerHook: 0,
-
-    }).setPin('#city-element')
-
-    // Contact Handler
-    const contact_scene = new ScrollMagic.Scene({
-      triggerElement: '#contact',
-      duration: window.innerHeight,
-      triggerHook: 0,
-
-    }).setPin('#contact-element')
-
-    // Add Scenes to ScrollMagic Controller
-    controller.addScene([
-      home_scene,
-      skill_tools_scene,
-      projects_scene,
-      team_scene,
-      office_scene,
-      city_scene,
-      contact_scene
-    ])
+  buildVerticalSlide (isVerticalSlide, activeSlide) {
+    this.setState({
+      active: {
+        isVerticalSlide: isVerticalSlide,
+        Fullpage: activeSlide,
+        horizontalSlider: 0,
+      }
+    });
   }
 
   render () {
+
+    const { active } = this.state;
+    const currentActive = active.Fullpage;
+    horizontalSliderProps.slides = [
+      <Slide style={{backgroundColor: 'red'}}><Designer buildVerticalSlide={() => { this.buildVerticalSlide(true, 3)}} /></Slide>,
+      <Slide style={{backgroundColor: 'yellow'}}><Designer buildVerticalSlide={() => { this.buildVerticalSlide(true, 3)}} /></Slide>,
+      <Slide style={{backgroundColor: 'green'}}><Designer buildVerticalSlide={() => { this.buildVerticalSlide(true, 3)}} /></Slide>
+    ];
+
+    const horizontalPageOptions = [
+      <HorizontalSlider id='horizontal-slider-1' {...horizontalSliderProps} />
+    ];
+
+    const verticalSlides = [
+      <Slide><Home /></Slide>,
+      <Slide><SkillsTools /></Slide>,
+      <Slide> Projects Component </Slide>,
+      <Slide><Team buildVerticalSlide={() => { this.buildVerticalSlide(false, 3)}} /></Slide>,
+      <Slide> Office Component </Slide>,
+      <Slide> City Component </Slide>,
+      <Slide> Contact Component </Slide>
+    ];
+
+    fullPageOptions.slides = active.isVerticalSlide ? verticalSlides : horizontalPageOptions;
+
     return (
-      <div className={styles.content}>
-        <main className={styles.fullScreen}>
-          <section id="home" >
-            <div id="home-element">
-              <div className={styles.fullScreen}>
-               {/*Home Component*/}
-               <Home />
-              </div>
-            </div>
-          </section>
-
-          <section id="skill-tools" className={classNames({[styles.fullScreen]: true, [styles.orange]: true})}>
-            <div id="skill-tools-element">
-              {/*Skill & Tools Component*/}
-            </div>
-          </section>
-
-          <section id="projects" className={classNames({[styles.fullScreen]: true, [styles.red]: true})}>
-            <div id="projects-element">
-              {/*Projects Component*/}
-            </div>
-          </section>
-
-          <section id="team" className={classNames({[styles.fullScreen]: true, [styles.blue]: true})}>
-            <div id="team-element">
-              {/*Team Component*/}
-            </div>
-          </section>
-          <section id="office" className={classNames({[styles.fullScreen]: true, [styles.orange]: true})}>
-            <div id="office-element">
-              {/*Office Component*/}
-            </div>
-          </section>
-          <section id="city" className={classNames({[styles.fullScreen]: true, [styles.red]: true})}>
-            <div id="city-element">
-              {/*The City Component*/}
-            </div>
-          </section>
-          <section id="contact" className={classNames({[styles.fullScreen]: true, [styles.blue]: true})}>
-            <div id="contact-element">
-              {/*Contact Component*/}
-            </div>
-          </section>
-        </main>
+      <div>
+        <Header changeFullpageSlide={changeFullpageSlide} currentActive={currentActive}  buildVerticalSlide={() => { this.buildVerticalSlide(true, 3)}} isTeamHeader={!active.isVerticalSlide} />
+        <Fullpage onSlideChangeEnd={this.onSlideChangeEnd} {...fullPageOptions} />
       </div>
     )
   }

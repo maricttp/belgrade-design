@@ -23,14 +23,21 @@ header {
 
     .navigationList {
       display: inline;
-      padding: 0 30px;
+      padding: 0 23px;
       text-align: right;
       list-style-type: none;
-      .link {
+      p {
+        cursor: pointer;
+      }
+      .whiteLink {
         text-decoration: none;
         color: $white;
       }
-      .activelink {
+      .greyLink {
+        text-decoration: none;
+        color: $grey;
+      }
+      .redLink {
         color: $red;
       }
     }
