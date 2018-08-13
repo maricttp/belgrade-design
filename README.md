@@ -5,21 +5,17 @@ For an overview of the project structure please refer to the [Gatsby documentati
 
 ## Install
 
-Make sure that you have the Gatsby CLI program installed:
-```sh
-npm install --global gatsby-cli
-```
+Please clone the directory, and then in the root directory run:
 
-And run from your CLI:
-```sh
-gatsby new gatsby-example-site
-```
+`npm install`
 
-Then you can run it by:
-```sh
-cd gatsby-example-site
-gatsby develop
-```
+## Running the app in development mode
+
+After you have installed the necesarry dependencies in the step above, please run
+
+`npm run develop`
+
+The application will compile, and should be available on `localhost:8000`.
 
 ## Deploy
 
