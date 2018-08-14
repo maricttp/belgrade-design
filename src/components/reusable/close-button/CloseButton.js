@@ -19,7 +19,6 @@ export default class CloseButton extends Component {
             >
                 <Icon
                     name="close"
-                    color="white"
                 />
             </button>
         )

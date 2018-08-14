@@ -6,7 +6,7 @@ import styles from './icon.module.scss'
 
 export default class Icon extends Component {
     render() {
-        const { color, name } = this.props;
+        const { name } = this.props;
         const classNameList = classNames(
             styles.icon
         );

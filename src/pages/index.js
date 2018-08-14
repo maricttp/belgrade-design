@@ -76,7 +76,7 @@ class IndexPage extends Component {
     const { active } = this.state;
     const currentActive = active.Fullpage;
     horizontalSliderProps.slides = [
-      <Slide style={{backgroundColor: 'red'}}><Designer buildVerticalSlide={() => { this.buildVerticalSlide(true, 3)}} /></Slide>,
+      <Slide><Designer buildVerticalSlide={() => { this.buildVerticalSlide(true, 3)}} /></Slide>,
       <Slide style={{backgroundColor: 'yellow'}}><Designer buildVerticalSlide={() => { this.buildVerticalSlide(true, 3)}} /></Slide>,
       <Slide style={{backgroundColor: 'green'}}><Designer buildVerticalSlide={() => { this.buildVerticalSlide(true, 3)}} /></Slide>
     ];
