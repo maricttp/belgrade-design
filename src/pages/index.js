@@ -6,6 +6,7 @@ import Home from '../components/home/Home'
 import SkillsTools from '../components/skillsTools/SkillsTools'
 import Team from '../components/team/Team'
 import Designer from '../components/designer/Designer'
+import Office from '../components/office/Office'
 
 import '../styles/index.module.scss'
 
@@ -89,7 +90,7 @@ class IndexPage extends Component {
       <Slide><SkillsTools /></Slide>,
       <Slide> Projects Component </Slide>,
       <Slide><Team buildVerticalSlide={() => { this.buildVerticalSlide(false, 3)}} /></Slide>,
-      <Slide> Office Component </Slide>,
+      <Slide><Office /></Slide>,
       <Slide> City Component </Slide>,
       <Slide> Contact Component </Slide>
     ];

@@ -1,13 +1,13 @@
 @import '../../../styles/colors';
 
 .primaryButton {
-    padding: 12px 50px;
-    border-radius: 40px;
+    padding: 1.2rem 5rem;
+    border-radius: 4rem;
     border-color: $red;
     background: transparent;
     color: $red;
-    font-size: 13px;
-    line-height: 22px;
+    font-size: 1.3rem;
+    line-height: 2.2rem;
 
     &:focus {
         outline: none;

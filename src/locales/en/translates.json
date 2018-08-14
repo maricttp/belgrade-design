@@ -27,5 +27,18 @@
   "toolsInVision": "InVision",
   "teamTitle": "the team.",
   "teamSubtitle": "click bellow to get to know us better!",
-  "teamButton": "LET'S START"
+  "teamButton": "LET'S START",
+  "officeTitle": " office.",
+  "officeText": "Our office is located on the last three floors of an old building in the city center. We have a wonderfull view of the entire city from the rooftop terrace where we sip our coffee in the morning and chat. It’s a great place to make great things.",
+  "officeOpening": "opened in 2014",
+  "officeArea": "751 m2",
+  "officeFloors": "3 floors",
+  "officeEmployees": "51 employees",
+  "officeMen": "28 guys",
+  "officeWomen": "23 girls",
+  "officeDesigners": "6 designers",
+  "officeBackend": "29 backend devs",
+  "officeFrontend": "12 frontend devs",
+  "officeManagingDirectorName": "Jan Keller",
+  "officeManagingDirectorPosition": "Managing Director/Belgrade"
 }
