@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import classNames from 'classnames'
 import { translate } from 'react-i18next'
 
+import CloseButton from '../reusable/close-button/CloseButton'
+
 import darkAltLogo from '../../../assets/images/dark-alt.png'
 import darkLogo from '../../../assets/images/dark.png'
 import lightLogo from '../../../assets/images/light.png'
@@ -24,7 +26,7 @@ class Header extends Component {
         <div className={styles.headerBox}>
           <img src={logo}/>
           {isTeamHeader ?
-            <button onClick={buildVerticalSlide}>x</button> :
+            <CloseButton onClick={buildVerticalSlide}/> :
             <ul className={styles.navigation}>
               <li className={styles.navigationList}>
                 <a className={classNames({
