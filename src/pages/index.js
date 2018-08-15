@@ -8,6 +8,7 @@ import Team from '../components/team/Team'
 import Designer from '../components/designer/Designer'
 import Office from '../components/office/Office'
 import Projects from '../components/projects/Projects'
+import Contact from '../components/contact/Contact'
 
 import '../styles/index.module.scss'
 
@@ -93,7 +94,7 @@ class IndexPage extends Component {
       <Slide><Team buildVerticalSlide={() => { this.buildVerticalSlide(false, 3)}} /></Slide>,
       <Slide><Office /></Slide>,
       <Slide> City Component </Slide>,
-      <Slide> Contact Component </Slide>
+      <Slide><Contact /></Slide>
     ];
 
     fullPageOptions.slides = active.isVerticalSlide ? verticalSlides : horizontalPageOptions;
