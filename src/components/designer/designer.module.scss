@@ -1,3 +1,126 @@
-.designer {
+@import '../../styles/colors';
 
+.designer {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    //margin: 7.7rem auto 0;
+    margin: 0 auto;
+    padding-top: 7.7rem;
+
+    background-size: 900px;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    @media all and (max-width: 950px) {
+        background-position: center;
+
+    }
+}
+.designerInfoWrapper {
+    margin-top: 12.4rem;
+    //width: 40%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+
+}
+.numberIndicator {
+    margin-top: 3.2rem;
+    width: 20%;
+    color: $grey;
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+    font-weight: bold;
+    .currentlyActive {
+        color: $red;
+    }
+}
+.designerInfo {
+    padding-left: 2.8rem;
+    width: 100%;
+}
+.lastName {
+    margin-bottom: 1.5rem;
+    word-wrap: break-word;
+}
+.jobDescription {
+    margin-bottom: 2rem;
+    font-weight: bold; 
+}
+.introduction {
+    margin-bottom: 2.2rem;
+    color: $grey;
+}
+
+// .imageWrapper {
+//     width: 60%;
+//     margin-top: -15.7rem;
+//     img {
+//         width: 100%;
+//     }
+// }
+.socialNetworkWrapper {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+.socialNetworkItem {
+    margin-right: 2.2rem;
+
+    &:last-child {
+        margin-right: 0;
+    }
+ 
+    a{
+        display:flex;
+        padding: 1rem 1.2rem;
+        width: 4.6rem;
+        height: 4.6rem;
+        border: 0.2rem solid $light-black;
+        border-radius: 100%;
+        color: $light-black;
+    }
+}
+.email {
+    &:hover {
+        color: $red;
+        border-color: $red;
+    }
+}
+.behance {
+    &:hover {
+        color: $behance-hover;
+        border-color: $behance-hover;
+    }
+}
+.facebook {
+    &:hover {
+        color: $facebook-hover;
+        border-color: $facebook-hover;
+    }
+}
+.twitter {
+    &:hover {
+        color: $twitter-hover;
+        border-color: $twitter-hover;
+    }
+}
+.instagram {
+    &:hover {
+        color: $instagram-hover;
+        border-color: $instagram-hover;
+    }
+}
+.dribbble {
+    &:hover {
+        color: $dribbble-hover;
+        border-color: $dribbble-hover;
+    }
+}
+.linkedin {
+    &:hover {
+        color: $linkedIn-hover;
+        border-color: $linkedIn-hover;
+    }
 }

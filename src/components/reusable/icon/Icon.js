@@ -6,9 +6,10 @@ import styles from './icon.module.scss'
 
 export default class Icon extends Component {
     render() {
-        const { name } = this.props;
+        const { name, noHeight } = this.props;
         const classNameList = classNames(
-            styles.icon
+            styles.icon,
+            { [styles.noHeight]: noHeight}
         );
         return (
             <svg className={classNameList}>
