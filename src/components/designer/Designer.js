@@ -56,9 +56,6 @@ class Designer extends Component {
             {this.renderSocialNetworks(data.socialNetoworks)}
           </div>
         </div>
-        {/* <div className={styles.imageWrapper}>
-          <img src={data.image}/>
-        </div> */}
       </div>
     )
   }
