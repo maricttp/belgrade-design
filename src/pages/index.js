@@ -24,6 +24,7 @@ import ArrowButton from '../components/reusable/arrow-button/ArrowButton'
 import style from '../styles/index.module.scss'
 
 import { Fullpage, Slide, HorizontalSlider } from 'fullpage-react';
+import TheCity from '../components/theCity/TheCity'
 const { changeFullpageSlide, changeHorizontalSlide } = Fullpage;
 
 const fullPageOptions = {
@@ -225,7 +226,7 @@ class IndexPage extends Component {
       <Slide><Projects /></Slide>,
       <Slide><Team buildVerticalSlide={() => { this.buildVerticalSlide(false, 3)}} /></Slide>,
       <Slide><Office /></Slide>,
-      <Slide> City Component </Slide>,
+      <Slide><TheCity /></Slide>,
       <Slide><Contact /></Slide>
     ];
 
