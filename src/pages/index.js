@@ -224,7 +224,7 @@ class IndexPage extends Component {
       <Slide><Home /></Slide>,
       <Slide><SkillsTools /></Slide>,
       <Slide><Projects /></Slide>,
-      <Slide><Team buildVerticalSlide={() => { this.buildVerticalSlide(false, 3)}} /></Slide>,
+      <Slide className={style.sliderColor}><Team buildVerticalSlide={() => { this.buildVerticalSlide(false, 3)}} /></Slide>,
       <Slide><Office /></Slide>,
       <Slide><TheCity /></Slide>,
       <Slide><Contact /></Slide>

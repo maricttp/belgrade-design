@@ -10,7 +10,8 @@
 }
 .titleWrapper {
   width: 80%;
-  margin: 18rem auto 0;
+  padding-top: 12rem;
+  margin: 0 auto;
 }
 
 .title {
@@ -21,13 +22,4 @@
 }
 .buttonWrapper {
   margin-top: 3.4rem;
-}
-.teamPhoto {
-  display: flex;
-  width: 80%;
-  margin: 0 auto;
-  align-items: center;
-  img {
-    margin: 0 auto;
-  }
 }

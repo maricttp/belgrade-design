@@ -20,7 +20,7 @@ class TheCity extends Component {
           <img src={img}/>
           <h5>{heading1}</h5>
           <h6>{heading2}</h6>
-          <ul>{list.map(obj => <li>{obj}</li>)}</ul>
+          <ul>{list.map((obj, index) => <li key={index}>{obj}</li>)}</ul>
         </div>
       )
     }
@@ -59,14 +59,14 @@ class TheCity extends Component {
           </div>
           <div className={styles.listWrapperDesktop}>
             <table className={styles.listElem}>
-              <tr>{fullList.map(obj => <td>{obj.props.children[0]}</td>)}</tr>
-              <tr>{fullList.map(obj => <td>{obj.props.children[1]}</td>)}</tr>
-              <tr>{fullList.map(obj => <td>{obj.props.children[2]}</td>)}</tr>
-              <tr>{fullList.map(obj => <td>{obj.props.children[3]}</td>)}</tr>
+              <tr>{fullList.map((obj, index) => <td key={index}>{obj.props.children[0]}</td>)}</tr>
+              <tr>{fullList.map((obj, index) => <td key={index}>{obj.props.children[1]}</td>)}</tr>
+              <tr>{fullList.map((obj, index) => <td key={index}>{obj.props.children[2]}</td>)}</tr>
+              <tr>{fullList.map((obj, index) => <td key={index}>{obj.props.children[3]}</td>)}</tr>
             </table>
           </div>
           <div className={styles.listWrapperMobile}>
-            {fullList.map(obj => <div>{obj}</div>)}
+            {fullList.map((obj, index) => <div key={index}>{obj}</div>)}
           </div>
         </div>
       </div>
