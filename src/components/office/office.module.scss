@@ -1,0 +1,84 @@
+@import '../../styles/colors';
+
+.office {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: $white;
+  .image {
+    position: absolute;
+    width: 45%;
+    height: auto;
+    left: 0;
+    top: 18rem;
+    img {
+      width: 100%;
+    }
+  }
+  .wrapper {
+    position: absolute;
+    left: 50%;
+    top: 19rem;
+    width: 35%;
+    .titleWrapper {
+      h3 {
+        width: 30%;
+        padding-bottom: 2.4rem;
+        span {
+          color: $red;
+        }
+      }
+      p {
+        color: $grey;
+        padding-bottom: 3.8rem;
+      }
+    }
+    .listWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 6.8rem;
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          color: black;
+          list-style-type: none;
+          padding-bottom: 2rem;
+          h6 {
+            font-weight: bold;
+          }
+        }
+        li:before {
+          display: flex;
+          content: '\2022';
+          color: $red;
+          padding-right: 0.5rem;
+        }
+      }
+    }
+    .jan {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      img {
+        height: 10rem;
+        width: 10rem;
+        margin-right: 2rem;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        p {
+          flex-wrap: wrap;
+          padding-bottom: 0.5rem;
+          color: $grey;
+        }
+        p:first-child {
+          font-weight: bold;
+          color: $black;
+        }
+      }
+    }
+  }
+}

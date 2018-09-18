@@ -1,0 +1,26 @@
+.arrowButton {
+    display: flex;
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    z-index: 100;
+    div { 
+        display: flex;
+        width: 50%;
+    }
+    span {
+        width: 2.4rem;
+        height: 1.5rem;
+        color: red;
+        text-align: right;
+        cursor: pointer;
+    }
+}
+.left { 
+    margin-left: 5%; 
+    justify-content: flex-start;
+}
+.right {
+    margin-right: 5%;
+    justify-content: flex-end;
+}

@@ -30,6 +30,7 @@ time, mark, audio, video {
 
 html {
   box-sizing: border-box;
+  font-size: 10px;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -37,74 +38,81 @@ html {
 
 h1 {
   font-weight: bold;
-  font-size: 78px;
-  letter-spacing: -0.2px;
-  line-height: 70px;
+  font-size: 22.9rem;
+  letter-spacing: -0.02rem;
+  line-height: 18rem;
 }
 
 h2 {
   font-weight: bold;
-  font-size: 59px;
-  letter-spacing: -0.2px;
-  line-height: 60px;
+  font-size: 7.8rem;
+  letter-spacing: -0.02rem;
+  line-height: 7.1rem;
+  color: $black;
 }
 
 h3 {
   font-weight: bold;
-  font-size: 32px;
-  letter-spacing: -0.1px;
-  line-height: 41px;
+  font-size: 5.9rem;
+  letter-spacing: -0.02rem;
+  line-height: 6rem;
+  color: $black;
 }
 
 h4 {
   font-weight: bold;
-  font-size: 22px;
+  font-size: 2.2rem;
   letter-spacing: 0;
-  line-height: 30px;
+  line-height: 3rem;
 }
 h5 {
-  font-size: 22px;
-  letter-spacing: -0.1px;
-  line-height: 26px;
+  font-size: 2.2rem;
+  letter-spacing: -0.01rem;
+  line-height: 2.6rem;
   font-weight: bold;
 }
 h6 {
-  font-size: 15px;
+  font-size: 1.5rem;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 2.4rem;
   font-weight: normal;
 }
 
 p {
-  font-size: 15px;
+  font-size: 1.6rem;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 2.4rem;
   font-weight: normal;
 }
 
 .content {
-  //background: $background-grey;
   width: 100%;
   height: 100%;
 }
-
-/*
-	Demo Styles: NOT REQUIRED
-*/
-
-.fullScreen {
-  height: 100%; /* makes panels the entire window height */
+.sliderDots {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  margin-bottom: 8.3rem;
+  padding-left: 16.5%;
   width: 100%;
-  text-align: center;
+  list-style: none;
+  z-index: 10;
 }
+.sliderDot {
+  margin-right: 2.7rem;
+  width: 1rem;
+  height: 1rem;
+  border: 0.2rem solid $light-black;
+  border-radius: 100%;
+  cursor: pointer;
 
-
-.blue {
-  background-color: #3883d8;
+  &:last-child {
+    margin-right: 0;
+  }
 }
-.red {
-  background-color: #cf3535;
-}
-.orange {
-  background-color: #ea6300;
+.sliderDotActive {
+  border-color: $red;
+  background: $red; 
 }

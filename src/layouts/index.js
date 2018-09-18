@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import i18n from '../i18n/i18n'
 
-import Header from '../components/header/Header'
-
 const Layout = ({children}) => (
   <div>
     <Helmet
@@ -13,7 +11,6 @@ const Layout = ({children}) => (
         {name: 'description', content: 'Sample'},
         {name: 'keywords', content: 'sample, something'},
       ]} />
-    <Header />
     <div>
       {children()}
     </div>

@@ -1,0 +1,87 @@
+@import "../../styles/colors";
+
+.theCity {
+  width: 100%;
+  height: 100%;
+  background: $white;
+  .wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 7.8rem auto 0;
+    align-content: left;
+    flex-direction: column;
+    .titleWrapper {
+      h2 {
+        margin-top: 7.8rem;
+        align-self: start;
+        width: 40rem;
+        font-weight: bold;
+      }
+    }
+    .listElem {
+      img {
+        margin-bottom: 2.6rem;
+      }
+      h5 {
+        font-size: 2.2rem;
+        padding-right: 7rem;
+        color: $black;
+        margin-bottom: 3.2rem;
+        height: max-content;
+      }
+      h6 {
+        color: $light-black;
+        font-weight: bold;
+        height: max-content;
+        margin-bottom: auto;
+      }
+      ul {
+        padding-top: 1rem;
+        li {
+          color: $grey;
+          font-family: 'HelveticaNeue', sans-serif;
+          font-size: 1.5rem;
+          list-style-type: none;
+          padding-bottom: 2rem;
+        }
+        li:before {
+          content: '\2022';
+          color: $red;
+          padding-right: 0.5rem;
+        }
+      }
+    }
+    .listWrapperDesktop {
+      table {
+        margin-top: 8.9rem;
+        table-layout: fixed;
+        text-align: left;
+        vertical-align: bottom;
+        width: 100%;
+      }
+      tr, td {
+        text-align: left;
+      }
+    }
+    .listWrapperMobile {
+      display: none;
+      width: 100%;
+      margin-top: 8.9rem;
+      flex-direction: row;
+      justify-content: space-around;
+      .listElem {
+        flex-direction: column;
+      }
+    }
+    @media screen and (max-width: 992px) {
+      .listWrapperDesktop {
+        display: none;
+      }
+      .listWrapperMobile {
+        display: flex;
+      }
+    }
+  }
+}
+
